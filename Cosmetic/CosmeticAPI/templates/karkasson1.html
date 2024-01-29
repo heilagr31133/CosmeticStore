@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каркассон</title>
+    <link rel="stylesheet" href="static/image.css">
+    <link rel="stylesheet" href="static/general.css">
+    <link rel="stylesheet" href="static/product.css">
+    <style>.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: black;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+.h3 {
+    color: #FFFFFF;
+}
+
+/* Адаптивный макет - когда экран меньше 800 пикселей в ширину, сделайте два столбца стеком друг на друга, а не рядом друг с другом (и измените направление-сделайте столбец "корзина" сверху) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3 style="color: #FFFFFF;">Платежный адрес</h3>
+            <label style="color: #FFFFFF;" for="fname"><i class="fa fa-user"></i>Имя</label>
+            <input type="text" id="fname" name="firstname" placeholder="Щипунов Андрей Леонидович">
+            <label style="color: #FFFFFF;" for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="and-shhipunov@mail.ru">
+            <label style="color: #FFFFFF;" for="adr"><i class="fa fa-address-card-o"></i>Адрес</label>
+            <input type="text" id="adr" name="address" placeholder="Томская 44-39">
+            <label style="color: #FFFFFF;" for="city"><i class="fa fa-institution"></i>Город</label>
+            <input type="text" id="city" name="city" placeholder="Пермь">
+
+            <div class="row">
+              <div class="col-50">
+                <label style="color: #FFFFFF;" for="state">Государство</label>
+                <input type="text" id="state" name="state" placeholder="Россия">
+              </div>
+              <div class="col-50">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3 style="color: #FFFFFF;" >Платеж</h3>
+            <label style="color: #FFFFFF;" for="fname">Допустимые карты</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label style="color: #FFFFFF;" for="cname">Имя на карте</label>
+            <input type="text" id="cname" name="cardname" placeholder="Щипунов Андрей Леонидович">
+            <label style="color: #FFFFFF;" for="ccnum">Номер кредитной карты</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label style="color: #FFFFFF;" for="expmonth">Годен месяц</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Сентябрь">
+
+            <div class="row">
+              <div class="col-50">
+                <label style="color: #FFFFFF;" for="expyear">Годен год</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2021">
+              </div>
+              <div class="col-50">
+                <label style="color: #FFFFFF;" for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label style="color: #FFFFFF;">
+          <input style="color: #FFFFFF;" type="checkbox" checked="checked" name="sameadr"> Адрес дставки совпадает с платежным адресом
+        </label>
+        <input style="color: #FFFFFF;" type="submit" value="Продолжить оформление заказа" class="btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+
+</div>
+
+</body>
+
+</html>

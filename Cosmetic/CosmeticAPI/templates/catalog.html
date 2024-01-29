@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    {% load static %}
+    <link rel="stylesheet" href="/static/image.css">
+    <link rel="stylesheet" href="/static/general.css">
+    <link rel="stylesheet" href="/static/catalog.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/images/logo.png" alt="Логотип">
+            <div class="shop_name">
+                <strong>Ваш собственый стиль "Магазин женской одежды"</strong>
+            </div>
+            <ul class="menu">
+                <li class="root"><a href="/">Главная</a></li>
+                <li class="root">
+                    <a href="catalog/">Каталог</a>
+                    <ul class="dropdown">
+                            <a href="karkasson">Платье ava</a>
+                            <a href="karkasson1">Костюм lauren</a>
+                            <a href="karkasson2">РИАННА</a>
+                    </ul>
+                </li>
+                <li class="root"><a href="contact">Контакты</a></li>
+            </ul>
+        </div>
+        <hr>
+
+        <h1>Каталог</h1>
+        <div class="catalo_wrap">
+            <div class="catalog_product_unit">
+                <a href="karkasson">
+                    <img src="/static/images/platie.jpeg" alt="Каркассон" title="Настольная игра Каркассон" class="catalog_image">
+                    ПЛАТЬЕ AVA ЛЬНЯНОЕ WHITE (ПОШИВ ПО ИНДИВИДУАЛЬНЫМ МЕРКАМ)</a>
+            </div>
+            <div class="catalog_product_unit">
+                <a href="karkasson1">
+                    <img src="/static/images/costym1.jpg" alt="Каркассон" title="Настольная игра Каркассон" class="catalog_image">
+                    КОСТЮМ LAUREN ЛЬНЯНОЙ</a>
+            </div>
+            <div class="catalog_product_unit">
+                <a href="karkasson2">
+                    <img src="/static/images/platie2.jpg" alt="Мачи Коро" title="Настольная игра Мачи Коро" class="catalog_image">
+                    РИАННА</a>
+            </div>
+            <div class="catalog_product_unit">
+                <a href="karkasson3">
+                    <img src="/static/images/platie3.jpg" alt="Мачи Коро" title="Настольная игра Мачи Коро" class="catalog_image">
+                    ДЖИЛЛИАН</a>
+            </div>
+            <div class="catalog_product_unit">
+                <a href="karkasson4">
+                    <img src="/static/images/kurtcka.jpg" alt="Манчкин" title="Настольная игра Манчкин" class="catalog_image">
+                    Пальто на молнии воротник Шанель</a>
+            </div>
+            <div class="catalog_product_unit">
+                <a href="karkasson5">
+                    <img src="/static/images/palto11.jpg" alt="Манчкин" title="Настольная игра Манчкин" class="catalog_image">
+                    Норка графит паркет кокон с капюшоном</a>
+            </div>
+        </div>
+
+        <hr>
+
+    </div>
+</body>
+
+</html>

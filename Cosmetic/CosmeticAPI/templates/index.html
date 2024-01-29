@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ваш стиль</title>
+    {% load static %}
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/index.css">
+    <link rel="stylesheet" href="/static/image.css">
+    <link rel="stylesheet" href="/static/general.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>.cart {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background-color: #364364;
+  transition: 0.1s;
+  cursor: pointer;
+  position: fixed; /* Фиксированное расположение */
+  top: 50px; /* в правом верхнем углу */
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  padding: 15px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Увеличиваем кнопку при наведении на нее */
+.cart:hover {
+  transform: scale(1.1);
+}
+
+/* Стилизуем счетчик товаров */
+.cart__num {
+  position: absolute;
+  background-color: #d62240;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}</style>
+</head>
+
+<body class="body_main">
+    <div class="header_main">
+        <div class="main_wrap">
+            <a href="index.html" class="logo"></a>
+            <div class="shop_name_wrap">
+                                <button class="cart" id="cart">
+  <img class="cart__image" src="static/images/cart.png" alt="Cart" />
+  <div class="cart__num" id="cart_num">0</div>
+</button>
+                <div class="shop_name_main">
+                    Ваш собственый стиль
+                </div>
+                <div class="shop_name_text">
+                    Добро пожаловать в магазин женской одежды
+                </div>
+            </div>
+            <div class="social_icons">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content_main">
+        <div class="main_wrap">
+            <div class="content_left">
+                <div class="menu_wrap">
+                    <div class="menu_wrap_text">Меню</div>
+                    <div class="root_main">
+                        <a href="/">Главная</a>
+                    </div>
+                    <div class="root_main">
+                        <a href="catalog/">Каталог</a>
+                        <div class="dropdown_main">
+                            <a href="karkasson">Платье ava</a>
+                            <a href="karkasson1">Костюм lauren</a>
+                            <a href="karkasson2">РИАННА</a>
+                        </div>
+                    </div>
+                    <div class="root_main">
+                        <a href="contact">Контакты</a>
+                    </div>
+                    <div id="cart_container">
+    <div id="cart_title">
+        <div class="clear"></div>
+    </div>
+    <div id="cart_toolbar">
+        <div id="cart_items" class="back"></div>
+    </div>
+
+</div>
+                </div>
+                <div class="now_is_open">
+                    <span>Now <br> is <br> open!</span>
+                </div>
+            </div>
+            <div class="content_right">
+                <div class="content_right_header">
+                    Наши новинки
+                </div>
+                <div class="content_right_product">
+                    <a href="karkasson" class="product_unit product_unit_new">
+                        <img src="static/images/platie.jpeg" alt="Каркассон">
+                        <div class="product_unit_name">
+                            ПЛАТЬЕ AVA ЛЬНЯНОЕ WHITE (ПОШИВ ПО ИНДИВИДУАЛЬНЫМ МЕРКАМ)
+                        </div>
+                        <div class="product_unit_price_wrap">
+                            <div class="product_unit_price_actual">14 490 ₽</div>
+                        </div>
+                    </a>
+                    <a href="karkasson1" class="product_unit product_unit_hot">
+                        <img src="static/images/costym1.jpg" alt="Каркассон">
+                        <div class="product_unit_name">
+                            КОСТЮМ LAUREN ЛЬНЯНОЙ
+                        </div>
+                        <div class="product_unit_price_wrap">
+                            <div class="product_unit_price_actual">14 990 ₽</div>
+                            <div class="product_unit_price_old">16 990 ₽</div>
+                        </div>
+                    </a>
+                    <a href="karkasson2" class="product_unit">
+                        <img src="static/images/platie2.jpg" alt="Каркассон">
+                        <div class="product_unit_name">
+                            РИАННА
+                        </div>
+                        <div class="product_unit_price_wrap">
+                            <div class="product_unit_price_actual">55 400 ₽</div>
+                        </div>
+                    </a>
+                    <a href="karkasson3" class="product_unit">
+                        <img src="static/images/platie3.jpg" alt="Каркассон">
+                        <div class="product_unit_name">
+                            ДЖИЛЛИАН
+                        </div>
+                        <div class="product_unit_price_wrap">
+                            <div class="product_unit_price_actual">7 920 ₽</div>
+                        </div>
+                    </a>
+                    <a href="karkasson4" class="product_unit">
+                        <img src="static/images/kurtcka.jpg" alt="Каркассон">
+                        <div class="product_unit_name">
+                            Пальто на молнии воротник Шанель
+                        </div>
+                        <div class="product_unit_price_wrap">
+                            <div class="product_unit_price_actual">41 650 ₽</div>
+                        </div>
+                    </a>
+                    <a href="karkasson5" class="product_unit">
+                        <img src="static/images/palto11.jpg" alt="Каркассон">
+                        <div class="product_unit_name">
+                            Норка графит паркет кокон с капюшоном
+                        </div>
+                        <div class="product_unit_price_wrap">
+                            <div class="product_unit_price_actual">125 000 ₽</div>
+                        </div>
+                    </a>
+                </div>
+               
+                
+            </div>
+            <div class="brends_main">
+                <img src="static/images/brands/castorland.png" alt="">
+                <img src="static/images/brands/crowd_games.jpg" alt="">
+                <img src="static/images/brands/bondibon.png" alt="">
+                <img src="static/images/brands/gaga2.png" alt="">
+                <img src="static/images/brands/hobby_world.png" alt="">
+                <img src="static/images/brands/ni.png" alt="">
+                <img src="static/images/brands/umbum.png" alt="">
+                <img src="static/images/brands/zvezda.gif" alt="">
+            </div>
+            <div class="instagram_feed_wrap">
+                <div class="instagram_feed_header">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram feed:</span>
+                    #Shop
+                </div>
+                <div class="instagram_feed_images">
+                    <img src="static/images/instagram/1.jpg" alt="">
+                    <img src="static/images/instagram/2.jpg" alt="">
+                    <img src="static/images/instagram/3.jpg" alt="">
+                    <img src="static/images/instagram/4.jpeg" alt="">
+                    <img src="static/images/instagram/5.jpg" alt="">
+                    <img src="static/images/instagram/6.jpg" alt="">
+                </div>
+            </div>
+            <div class="social_buttons_wrap">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_content">
+        <div class="main_wrap">
+            <div class="footer_content_wrap">
+                <div>
+                    <div class="column_head">
+                        Меню
+                    </div>
+                    <div class="column_link">
+                        <a href="index.html">Главная</a>
+                        <a href="catalog.html">Каталог</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="column_head">
+                        Наш аккаунт
+                    </div>
+                    <div class="column_link">
+                        <a href="#">Ваша учетная запись</a>
+                        <a href="#">Личная информация</a>
+                        <a href="#">Адреса</a>
+                        <a href="#">Скидка</a>
+                        <a href="#">История заказов</a>
+                        <a href="#">Адреса</a>
+                        <a href="#">Поисковые запросы</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="column_head">
+                        Наша поддержка
+                    </div>
+                    <div class="column_link">
+                        <a href="#">Карта сайта</a>
+                        <a href="#">Поисковые запросы</a>
+                        <a href="#">Расширенный поиск</a>
+                        <a href="#">Мобильный</a>
+                        <a href="#">Связаться с нами</a>
+                        <a href="#">Мобильный</a>
+                        <a href="#">Адреса</a>
+                    </div>
+                </div>
+                <div class="news_letter">
+                    <div class="column_head">
+                        Новостная рассылка
+                    </div>
+                    <div class="news_content">
+                        <input type="text" placeholder="Insert e-mail">
+                        <button>SUBMIT</button>
+                        <div class="cards_wrap">
+                            <img src="static/images/payment_methods/american-express.jpg" alt="">
+                            <img src="static/images/payment_methods/master-card.jpg" alt="">
+                            <img src="static/images/payment_methods/maestro.jpg" alt="">
+                            <img src="static/images/payment_methods/paypal.jpg" alt="">
+                            <img src="static/images/payment_methods/discover.jpg" alt="">
+                            <img src="static/images/payment_methods/visa.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="about">
+                    <div class="column_head">
+                        About Us
+                    </div>
+                    <div class="about_text_wrap">
+                        <div class="about_email">
+                            <span>e-mail:</span> contact@shop.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_copyrights">
+        <div class="main_wrap">
+            <div class="footer_copyrights_text">
+                ©Ваш стиль. Все права защищены
+            </div>
+            <div class="footer_copyrights_social">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-tumblr"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fas fa-rss"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+<script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="js/vendor/underscore.min.js" type="text/javascript"></script>
+<script src="js/modules/catalog.js" type="text/javascript"></script>
+<script src="js/modules/cart.js" type="text/javascript"></script>
+<script src="js/modules/main.js" type="text/javascript"></script>
+</body>
+
+</html>
